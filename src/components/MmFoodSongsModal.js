@@ -14,8 +14,8 @@ export default function MmFoodSongsModal() {
                     <ListGroup.Item>
                         <div className="d-flex justify-content-between">
                             <a href={links[index]}>{song}</a>
-                            <Button>
-                                <i class="far fa-thumbs-up"></i>
+                            <Button className="bg-secondary border border-secondary">
+                                <i class="far fa-thumbs-up "></i>
                             </Button>
                         </div>
 
