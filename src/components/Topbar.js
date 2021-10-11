@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import { Navbar, Nav, Container, Button, Modal } from 'react-bootstrap'
+import { Navbar, Nav, Container, Button, Modal, Form } from 'react-bootstrap'
 import AboutModal from './AboutModal'
 export default function Topbar() {
-    const [show,setShow] = useState(false)
-    const handleClose= () => setShow(false)
-    const handleShow = () => setShow(true)
+    const [showAbout,setShowAbout] = useState(false)
+    const handleCloseAbout= () => setShowAbout(false)
+    const handleShowAbout = () => setShowAbout(true)
     return (
         <div>
 
@@ -13,12 +13,20 @@ export default function Topbar() {
                     <Navbar.Brand href="#home">MF DOOM</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link onClick = {()=>handleShow()}>About</Nav.Link>
+                        <Nav.Link>Form</Nav.Link>
 
                     </Nav>
                 </Container>
             </Navbar>
-            <Modal show={show} onHide={handleClose}>
-                <AboutModal handleClose={handleClose}/>
+            <Modal show={showAbout} onHide={handleCloseAbout}>
+                <AboutModal handleCloseAbout={handleCloseAbout}/>
+            </Modal>
+            <Modal>
+                <Form onSubmit={handleSubmit} show={showForm} onHide = {handleCloseForm}>
+                    <Form.Group>
+                        
+                    </Form.Group>
+                </Form>
             </Modal>
         </div>
     )

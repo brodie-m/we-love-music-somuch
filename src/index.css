@@ -27,3 +27,13 @@ code {
 .sr-only {
   text-shadow: 1px 1px black;
 }
+
+.likedClass {
+  background-color: blue;
+}
+.notLikedClass {
+  background-color: white;
+}
+.notLikedClass i {
+  color: black;
+}
