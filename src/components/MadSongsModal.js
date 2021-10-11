@@ -1,9 +1,15 @@
 import React from 'react'
-import {ListGroup } from 'react-bootstrap'
+import {ListGroup} from 'react-bootstrap'
+const songs = [	"The Illest Villains","Accordion","Meat Grinder",	"Bistro",	"Raid","America's Most Blunted",	"Sickfit"]
 
 export default function MadSongsModal() {
-    const songs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     return (
-        
+        <ListGroup>
+            {songs.map(song=> (
+                <ListGroup.Item>
+                    {song}
+                </ListGroup.Item>
+            ))}
+        </ListGroup>
     )
 }
