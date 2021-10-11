@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.carousel-caption {
+  text-shadow: 1px 1px black;
+  font-size: larger;
+  mix-blend-mode: normal;
+}
+
+.carousel-caption p{
+  font-size: smaller;
+}
+
+.carousel-control-next-icon {
+  text-shadow: 1px 1px black;
+}
+.sr-only {
+  text-shadow: 1px 1px black;
+}
