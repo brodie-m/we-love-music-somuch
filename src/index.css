@@ -41,3 +41,34 @@ code {
 form {
   padding: 10px;
 }
+#fancomments {
+  /* max-width: 40%; */
+  overflow-wrap: break-word;
+  
+}
+
+.change-width {
+  width: 25%;
+}
+.big-width {
+  width: 130%;
+}
+
+.list-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list-group-item {
+  background-color: #282c34;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+}
+.list-group-item h1, .list-group-item h2 {
+  font-size: 1.6rem;
+  
+}
+.list-group-item h1 {
+  color: rgb(173, 231, 233);
+}
