@@ -46,8 +46,12 @@ export default function Topbar() {
       <Modal show={showForm} onHide={handleCloseForm}>
         <Form onSubmit={handleSubmit}>
           <Form.Group>
-            <Form.Label>Username</Form.Label>
+            <Form.Label>Name</Form.Label>
             <Form.Control type="text" required id="1"/>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="text" required id="2"/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Comment</Form.Label>

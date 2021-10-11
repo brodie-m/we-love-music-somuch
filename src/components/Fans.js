@@ -1,7 +1,7 @@
 import React from 'react'
 import { ListGroup } from 'react-bootstrap'
-const fans = localStorage.getItem('MF-DOOM-data')
-const fansData = JSON.parse(fans)
+const fans = localStorage.getItem('MF-DOOM-data') 
+const fansData = JSON.parse(fans) || ['placeholder','something']
 
 function Fans() {
     return (
