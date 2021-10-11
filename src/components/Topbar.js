@@ -5,6 +5,10 @@ export default function Topbar() {
     const [showAbout,setShowAbout] = useState(false)
     const handleCloseAbout= () => setShowAbout(false)
     const handleShowAbout = () => setShowAbout(true)
+
+    const [showForm,setFormAbout] = useState(false)
+    const handleCloseForm = () => {}
+    const handleSubmit = () => {}
     return (
         <div>
 
@@ -12,7 +16,7 @@ export default function Topbar() {
                 <Container>
                     <Navbar.Brand href="#home">MF DOOM</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link onClick = {()=>handleShow()}>About</Nav.Link>
+                        <Nav.Link onClick = {()=>handleShowAbout()}>About</Nav.Link>
                         <Nav.Link>Form</Nav.Link>
 
                     </Nav>
