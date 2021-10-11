@@ -5,9 +5,9 @@ const fansData = JSON.parse(fans) || ['placeholder','something']
 
 function Fans() {
     return (
-        <div className="w-20 d-flex flex-column justify-content-center ms-4">
+        <div className="mw-20 d-flex flex-column justify-content-center ms-4">
             <h1 className="text-white">Fan Comments!</h1> 
-            <ListGroup>
+            <ListGroup id="fancomments">
                 {fansData.map((data, index) => (
                     <ListGroup.Item>
                     <div className="d-block justify-content-between">

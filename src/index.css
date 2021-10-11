@@ -41,3 +41,8 @@ code {
 form {
   padding: 10px;
 }
+
+#fancomments {
+  max-width: 40%;
+  overflow-wrap: break-word ;
+}

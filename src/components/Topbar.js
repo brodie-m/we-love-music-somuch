@@ -45,7 +45,7 @@ export default function Topbar() {
       </Modal>
       <Modal show={showForm} onHide={handleCloseForm}>
         <Form onSubmit={handleSubmit}>
-          <Form.Group>
+          <Form.Group className="mw-25">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" required id="1"/>
           </Form.Group>
