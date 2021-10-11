@@ -1,6 +1,10 @@
-import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import React, {useState} from 'react'
+import { Navbar, Nav, Container, Button, Modal } from 'react-bootstrap'
+import AboutModal from './AboutModal'
 export default function Topbar() {
+    const [show,setShow] = useState(false)
+    const handleClose= () => setShow(false)
+    const handleShow = () => setShow(true)
     return (
         <div>
 
@@ -9,11 +13,14 @@ export default function Topbar() {
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#Albums">Albums</Nav.Link>
-                        <Nav.Link href="#About">About</Nav.Link>
+                        <Button onClick = {()=>handleShow()}>About</Button>
+                        <Nav.Link>Something</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
+            <Modal show={show} onHide={handleClose}>
+                <AboutModal handleClose={handleClose}/>
+            </Modal>
         </div>
     )
 }
