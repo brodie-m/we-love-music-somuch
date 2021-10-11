@@ -37,3 +37,7 @@ code {
 .notLikedClass i {
   color: black;
 }
+
+form {
+  padding: 10px;
+}
