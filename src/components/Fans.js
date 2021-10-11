@@ -10,7 +10,7 @@ function Fans() {
             <ListGroup>
                 {fansData.map((data, index) => (
                     <ListGroup.Item>
-                    <div className="d-flex justify-content-between">
+                    <div className="d-block justify-content-between">
                         <h1>{data[0]}</h1>
                         <h2>{data[1]}</h2>
                         <p>{data[2]}</p>
