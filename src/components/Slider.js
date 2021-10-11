@@ -13,7 +13,7 @@ export default function Slider() {
     const handleOpenFood = () => setShowFood(true)
     const handleOpenMad = () => setShowMad(true)
     return (
-        <Carousel variant="dark" className = "w-50 text-dark" fade="true">
+        <Carousel variant="dark" className = "w-50 text-dark w-99 ms-5" fade="true">
             <Carousel.Item>
                 <img
                     className="d-block w-100"
