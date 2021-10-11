@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Artist from './components/Artist';
+import Carousel from './components/Slider';
+import Description from './components/Description';
+import Topbar from './components/Topbar';
+import Slider from './components/Slider';
+import Gogo from './components/Gogo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topbar/>
+      <div className="Container d-flex justify-content-center">
+      <Slider/>
+      </div>
+      
     </div>
   );
 }
