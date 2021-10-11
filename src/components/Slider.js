@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Modal } from 'react-bootstrap'
+import MadSongsModal from './MadSongsModal'
+import MmFoodSongsModal from './MmFoodSongsModal'
 
 
 export default function Slider() {
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
     const handleClose = () => setShow(false)
     const handleOpen = () => setShow(true)
     return (
@@ -32,6 +34,13 @@ export default function Slider() {
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
+            <Modal show={show} onHide={handleClose}>
+                <MadSongsModal handleClose={handleClose}/>
+            </Modal>
+            <Modal show={show} onHide={handleClose}>
+                <MmFoodSongsModal handleClose={handleClose}/>
+            </Modal>
         </Carousel>
+
     )
 }
