@@ -14,7 +14,6 @@ export default function MadSongsModal() {
                 {songs.map((song,index) => (
                     <ListGroup.Item>
                     <a href={links[index]}>{song}</a>
-                    <Button>Like</Button>
                 </ListGroup.Item>
                 ))}
             </ListGroup>
