@@ -39,3 +39,6 @@
 body {
   background-color: #282c34;
 }
+.carousel-item {
+  color: black;
+}
