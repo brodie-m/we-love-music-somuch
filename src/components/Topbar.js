@@ -12,9 +12,8 @@ export default function Topbar() {
                 <Container>
                     <Navbar.Brand href="#home">MF DOOM</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Button onClick = {()=>handleShow()}>About</Button>
-                        <Nav.Link>Something</Nav.Link>
+                        <Nav.Link onClick = {()=>handleShow()}>About</Nav.Link>
+
                     </Nav>
                 </Container>
             </Navbar>

@@ -1,7 +1,6 @@
 import './App.css';
 import Artist from './components/Artist';
 import Carousel from './components/Slider';
-import Description from './components/Description';
 import Topbar from './components/Topbar';
 import Slider from './components/Slider';
 import Gogo from './components/Gogo';
