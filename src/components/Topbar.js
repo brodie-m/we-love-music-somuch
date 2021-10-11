@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
 import AboutModal from "./AboutModal";
+import useLocalStorage from "../hooks/useLocalStorage";
 export default function Topbar() {
   const [showAbout, setShowAbout] = useState(false);
   const handleCloseAbout = () => setShowAbout(false);
@@ -9,7 +10,25 @@ export default function Topbar() {
   const [showForm, setShowForm] = useState(false);
   const handleCloseForm = () => setShowForm(false);
   const handleShowForm = () => setShowForm(true);
-  const handleSubmit = () => {};
+
+
+  const [data,setData] = useLocalStorage('data',[])
+  function createData(data) {
+      setData(previousData => {
+          return [...previousData, data]
+      })
+  }
+
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      const data = [document.getElementById('1').value,document.getElementById('2').value,document.getElementById('3').value]
+      createData(data)
+      handleCloseForm();
+    };
+
+
+
   return (
     <div>
       <Navbar bg="dark" variant="dark" className="shadow">
@@ -28,16 +47,17 @@ export default function Topbar() {
         <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control type="text" required id="1"/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Email</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control type="text" required id="2"/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Comment</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control type="text" required id="3"/>
           </Form.Group>
+          <Button type="submit">Add comment</Button>
         </Form>
       </Modal>
     </div>
