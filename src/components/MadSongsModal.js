@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListGroup, Modal } from 'react-bootstrap'
+import { ListGroup, Modal, Button } from 'react-bootstrap'
 const songs = ["The Illest Villains", "Accordion", "Meat Grinder", "Bistro", "Raid", "America's Most Blunted", "Sickfit", "Rainbows",
     "Curls", "Do Not Fire!", "Money Folder", "Shadows of Tomorrow", "Operation Lifesaver aka Mint Test", "Figaro", "Hardcore Hustle", "Strange Ways", "Fancy Clown",
     "Eye", "Supervillain Theme", "All Caps", "Great Day", "Rhinestone Cowboy"]
@@ -14,6 +14,7 @@ export default function MadSongsModal() {
                 {songs.map((song,index) => (
                     <ListGroup.Item>
                     <a href={links[index]}>{song}</a>
+                    <Button>Like</Button>
                 </ListGroup.Item>
                 ))}
             </ListGroup>
