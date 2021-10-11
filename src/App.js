@@ -10,12 +10,13 @@ function App() {
   return (
     <div className="App">
       <Topbar/>
-      <div className ="d-flex ">
-        
-      <Fans className="w-25"/>
-        
+      <div className="container">
+        <div></div>
+      </div>
+      <div id = "fansHolder" className ="d-flex mt-5">
+        <Fans className="w-25"/>
       <div className="Container d-flex justify-content-center w-75">
-      <Slider/>
+      <Slider className = 'big-width'/>
       </div>
       </div>
       

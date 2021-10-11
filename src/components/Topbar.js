@@ -31,9 +31,9 @@ export default function Topbar() {
 
   return (
     <div>
-      <Navbar bg="dark" variant="dark" className="shadow">
+      <Navbar data-testid = "branding" bg="dark" variant="dark" className="shadow">
         <Container>
-          <Navbar.Brand href="#home">MF DOOM</Navbar.Brand>
+          <Navbar.Brand datahref="#home">MF DOOM</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={() => handleShowAbout()}>About</Nav.Link>
             <Nav.Link onClick={() => handleShowForm()}>Add a comment</Nav.Link>
