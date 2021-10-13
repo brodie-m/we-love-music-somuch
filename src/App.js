@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, NavLink, Switch, Redirect} from 'react-router-dom'
 import Artist from './components/Artist';
 import Carousel from './components/Slider';
 import Topbar from './components/Topbar';
@@ -7,10 +7,14 @@ import Slider from './components/Slider';
 import Gogo from './components/Gogo';
 import Fans from './components/Fans';
 import Something from './components/Something'
+import NotFound from './components/NotFound.js'
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" exact>
+          <Redirect to="/home"/>
+        </Route>
         <Route path = '/home' exact>
           <div className="App">
 
@@ -28,6 +32,9 @@ function App() {
         </Route>
         <Route path = '/something' exact>
             <Something/>
+        </Route>
+        <Route path="*">
+            <NotFound/>
         </Route>
       </Switch>
     </Router>
