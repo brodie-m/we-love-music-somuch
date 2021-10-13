@@ -19,7 +19,7 @@ export default function Slider() {
     },[handleOpenFood, handleOpenMad])
 
     return (
-        <Carousel variant="dark" className = {`w-75 text-dark ms-5 mt-5 ${niceEffect}`} fade="true">
+        <Carousel variant="dark" className = {`w-75 text-dark ms-5 mt-5 ${niceEffect} `} fade="true">
             <Carousel.Item>
                 <img
                     className="d-block w-100"
