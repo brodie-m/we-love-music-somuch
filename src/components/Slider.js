@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Carousel, Modal } from 'react-bootstrap'
 import MadSongsModal from './MadSongsModal'
 import MmFoodSongsModal from './MmFoodSongsModal'
@@ -12,8 +12,14 @@ export default function Slider() {
     const handleCloseMad = () => setShowMad(false)
     const handleOpenFood = () => setShowFood(true)
     const handleOpenMad = () => setShowMad(true)
+    let niceEffect = 'test';
+    useEffect(()=> {
+        niceEffect = 'bright-white'
+        console.log('effect')
+    },[handleOpenFood, handleOpenMad])
+
     return (
-        <Carousel variant="dark" className = "w-75 text-dark ms-5 mt-5" fade="true">
+        <Carousel variant="dark" className = {`w-75 text-dark ms-5 mt-5 ${niceEffect}`} fade="true">
             <Carousel.Item>
                 <img
                     className="d-block w-100"
@@ -26,7 +32,7 @@ export default function Slider() {
                     <p>MF Doom described Mm..Food as a concept album "about the things you find on a picnic, or at a picnic table".[1] The album's titles and lyrics contain references to different foods, some with common metaphors and double entendres in the "street world" and the "nutritional realm".[2]</p>
                     <h3>Click to show songs</h3>
                 </Carousel.Caption>
-                <Modal show={showMad} onHide={handleCloseMad}>
+                <Modal show={showMad} onHide={handleCloseMad} className={`${niceEffect}`}>
                 <MadSongsModal handleClose={handleCloseMad}/>
             </Modal>
             </Carousel.Item>

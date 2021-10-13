@@ -38,6 +38,10 @@ code {
   color: black;
 }
 
+.bright-white {
+  opacity: 0.5 !important;
+}
+
 form {
   padding: 10px;
 }
