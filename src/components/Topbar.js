@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
 import AboutModal from "./AboutModal";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { BackButton } from "./Backbutton";
 export default function Topbar() {
   const [showAbout, setShowAbout] = useState(false);
   const handleCloseAbout = () => setShowAbout(false);
@@ -39,6 +40,7 @@ export default function Topbar() {
           <Nav className="me-auto">
             <Nav.Link onClick={() => handleShowAbout()}>About</Nav.Link>
             <Nav.Link onClick={() => handleShowForm()}>Add a comment</Nav.Link>
+            <BackButton />
           </Nav>
         </Container>
       </Navbar>
@@ -62,6 +64,7 @@ export default function Topbar() {
           <Button type="submit">Add comment</Button>
         </Form>
       </Modal>
+      
     </div>
   );
 }
