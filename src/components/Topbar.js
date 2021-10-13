@@ -37,7 +37,7 @@ export default function Topbar() {
       <Navbar data-testid = "branding" bg="dark" variant="dark" className="shadow">
         <Container>
           <Navbar.Brand datahref="#home">
-            <NavLink to='/home'>MF DOOM</NavLink>
+            <NavLink to='/home' className="custom-link">MF DOOM</NavLink>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={() => handleShowAbout()}>About</Nav.Link>
