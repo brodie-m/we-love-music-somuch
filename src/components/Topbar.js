@@ -41,7 +41,7 @@ export default function Topbar() {
             <NavLink to='/home' className="custom-link">MF DOOM</NavLink>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <BackButton />
+            <BackButton data-testid = "back-button"/>
             <Nav.Link onClick={() => handleShowAbout()}>About</Nav.Link>
             <Nav.Link onClick={() => handleShowForm()}>Add a comment</Nav.Link>
             <Nav.Link href='/something' >Something</Nav.Link>
