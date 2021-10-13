@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
 import AboutModal from "./AboutModal";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { BackButton } from "./Backbutton";
+import { NavLink } from "react-router-dom";
 export default function Topbar() {
   const [showAbout, setShowAbout] = useState(false);
   const handleCloseAbout = () => setShowAbout(false);
@@ -36,7 +37,9 @@ export default function Topbar() {
     <div>
       <Navbar data-testid = "branding" bg="dark" variant="dark" className="shadow">
         <Container>
-          <Navbar.Brand datahref="#home">MF DOOM</Navbar.Brand>
+          <Navbar.Brand datahref="#home">
+            <NavLink to='/home' className="custom-link">MF DOOM</NavLink>
+          </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={() => handleShowAbout()}>About</Nav.Link>
             <Nav.Link onClick={() => handleShowForm()}>Add a comment</Nav.Link>

@@ -31,9 +31,11 @@ function App() {
           </div>
         </Route>
         <Route path = '/something' exact>
+        <Topbar/>
             <Something/>
         </Route>
         <Route path="*">
+        <Topbar/>
             <NotFound/>
         </Route>
       </Switch>
