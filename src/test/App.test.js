@@ -9,4 +9,5 @@ test('renders navbar', () => {
 });
 test('renders form', ()=> {
   render(<Fans/>)
+  
 })

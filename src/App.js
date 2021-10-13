@@ -14,9 +14,9 @@ function App() {
         <div></div>
       </div>
       <div id = "fansHolder" className ="d-flex mt-5">
-        <Fans className="w-25"/>
+        <Fans className="w-25" title="its a prop"/>
       <div className="Container d-flex justify-content-center w-75">
-      <Slider className = 'big-width'/>
+      <Slider/>
       </div>
       </div>
       

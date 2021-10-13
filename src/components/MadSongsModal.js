@@ -17,6 +17,7 @@ export default function MadSongsModal() {
                     <ListGroup.Item>
                         <div className="d-flex justify-content-between">
                             <a href={links[index]}>{song}</a>
+                            
                             <LikeButton/>
                             
                         </div>
